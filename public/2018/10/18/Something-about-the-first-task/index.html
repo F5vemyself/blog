@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="Git
+
+工作区和暂存区
+撤销修改
+远程仓库
+分支合并与删除
+打标签
+ssh密钥
+
+
+Hexo主题的修改
+我喜欢的主题链接：湖绿风
+操作步骤
+
+
+
+【Git】  工作区和暂存区
+
+
+1234一些小知识点总结：$ git add readme.txt              将readme.txt文" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Something about the first task | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Git  工作区和暂存区 撤销修改 远程仓库 分支合并与删除 打标签 ssh密钥   Hexo主题的修改 我喜欢的主题链接：湖绿风 操作步骤    【Git】  工作区和暂存区   1234一些小知识点总结：$ git add readme.txt              将readme.txt文件从工作区保存到暂存区域$ git commit -m &amp;quot;readme.txt&amp;quot">
+<meta name="keywords" content="一些琐碎的知识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Something about the first task">
+<meta property="og:url" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Git  工作区和暂存区 撤销修改 远程仓库 分支合并与删除 打标签 ssh密钥   Hexo主题的修改 我喜欢的主题链接：湖绿风 操作步骤    【Git】  工作区和暂存区   1234一些小知识点总结：$ git add readme.txt              将readme.txt文件从工作区保存到暂存区域$ git commit -m &amp;quot;readme.txt&amp;quot">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/remote-v.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/remote-rm.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/tag1.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/tag2.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/tag3.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/tag4.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/tag5.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/ssh.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/change.png">
+<meta property="og:updated_time" content="2018-10-18T14:32:33.045Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Something about the first task">
+<meta name="twitter:description" content="Git  工作区和暂存区 撤销修改 远程仓库 分支合并与删除 打标签 ssh密钥   Hexo主题的修改 我喜欢的主题链接：湖绿风 操作步骤    【Git】  工作区和暂存区   1234一些小知识点总结：$ git add readme.txt              将readme.txt文件从工作区保存到暂存区域$ git commit -m &amp;quot;readme.txt&amp;quot">
+<meta name="twitter:image" content="http://yoursite.com/2018/10/18/Something-about-the-first-task/img/remote-v.png">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Something-about-the-first-task" class="post-Something-about-the-first-task post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Something about the first task
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/10/18/Something-about-the-first-task/" data-id="cjneoxeoh0000n8tln237i62f" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <ul>
+<li><p>Git</p>
+<ul>
+<li>工作区和暂存区</li>
+<li>撤销修改</li>
+<li>远程仓库</li>
+<li>分支合并与删除</li>
+<li>打标签</li>
+<li>ssh密钥</li>
+</ul>
+</li>
+<li>Hexo主题的修改<ul>
+<li>我喜欢的主题链接：<a href="https://github.com/wizardforcel/hexo-theme-cyanstyle" target="_blank" rel="noopener">湖绿风</a></li>
+<li>操作步骤</li>
+</ul>
+</li>
+</ul>
+<font color="darkred">【Git】  工作区和暂存区</font>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一些小知识点总结：</span><br><span class="line">$ git add readme.txt              将readme.txt文件从工作区保存到暂存区域</span><br><span class="line">$ git commit -m &quot;readme.txt&quot;      将readme.txt文件从暂存区提交到版本库</span><br><span class="line">$ git diff HEAD -- readme.txt     查看工作区和版本库里面最新版本的区别</span><br></pre></td></tr></table></figure>
+<hr>
+
+<font color="darkred">【Git】  撤销修改</font>
+
+
+<p>情况一：没有使用 <code>$ git add readme.txt</code>  提交到暂存区<br>直接使用<code>$ git checkout -- readme.txt</code> ，即可撤销</p>
+<p>情况二：已经使用 <code>$ git add readme.txt</code>  命令提交到暂存区了<br>此时分两步：<br>1.使用<code>$ git reset HEAD readme.txt</code>使其返回到情况一！<br>2.使用情况一的命令<code>$ git checkout -- readme.txt</code>即可撤销</p>
+<hr>
+<font color="darkred">【Git】  删除文件</font>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">一般情况下，你通常直接在文件管理器中把没用的文件删了，或者用rm命令删了：</span><br><span class="line">$ rm readme.txt</span><br></pre></td></tr></table></figure>
+<p> 这个时候，Git知道你删除了文件，因此，工作区和版本库就不一致了，<code>git status</code>命令会立刻告诉你哪些文件被删除了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> $ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged for commit:</span><br><span class="line">  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line"></span><br><span class="line">    deleted:    readme.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or </span><br><span class="line">&quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+<p><br><br><br>现在你有两个选择：<br>1.假如你是误删，使用<code>$ git checkout --readme.txt</code>,就可以恢复了</p>
+<p>2.如果确实要从版本库中删除该文件，那就用命令<code>$ git rm</code>删掉，并且<code>$ git commit</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git rm readme.txt</span><br><span class="line">rm &apos;readme.txt&apos;</span><br><span class="line"></span><br><span class="line">$ git commit -m &quot;remove readme.txt&quot;</span><br><span class="line">[master d46f35e] remove readme.txt</span><br><span class="line"> 1 file changed, 1 deletion(-)</span><br><span class="line"> delete mode 100644 test.txt</span><br></pre></td></tr></table></figure></p>
+<p>现在文件就从版本库中被删除了！<br><br><br></p>
+<font color="red">假如你突然后悔了!</font><br>但是此时 <del>readme.txt</del> 已经从版本库删除了，因为你已经commit了，那么怎么办呢？此时你可以利用<code>版本回退</code>功能<br><code>$ git reset --hard HEAD^</code>通过此命令可以返回上一个版本！<br><br><br><br><br>———————————————————————————————————————————————————————————————————————————————————<br><br><font color="darkred">【Git】  远程仓库</font>
+
+<p>多人开发的时候，如果想参与开发，怎么办呢？<br>1.在github里找到别人的仓库，Fork一份（此时你的仓库里有一份一模一样的）<br>2.把Fork的仓库clone到本地仓库，这样就可以在git里对其就行操作啦！（Fork过来了，就是我个人的仓库啦，想怎么修改怎么修改）<br>3.如果你认为你开发的部分已经相对完善，在github上pull request一下，如果原仓库持有者认为你的分支不错，会将你的分支merge到master分支上<br><br><br></p>
+<p><code>补充：</code>怎么样知道自己的本地仓库有没有和远程仓库建立联系呢？<br>又或者已经建立了联系，但不知道和谁建立了联系？<br>如何删除已建立的联系呢?<br>1.使用<code>$ git remote</code>命令查看是否建立联系， 如果已经建立了联系，会出现<code>origin</code><br>2.使用<code>$ git remote -v</code>查看和谁建立了联系<br><img src="img/remote-v.png" alt="remote-v"><br>3.如果已经建立联系了<br><img src="img/remote-rm.png" alt="remote-rm"> 此时利用此命令取消联系</p>
+<hr>
+<font color="darkred">【Git】  分支合并与修改</font>
+
+<p>在<code>dev</code>分支上，已经<code>add</code>，并且<code>commit</code>了<code>dev01.txt</code>文件，此时准备将其合并到master分支！</p>
+<font color="orange">一定要先将其切回<code>master</code>分支，在master分支上</font>，执行如下命令行：<br><code>$ git merge dev</code>(此方法为快速合并)<br>另一种合并方法：<code>$ git  merge --no-ff -m &quot;bulabulabula&quot; dev</code> （非快速合并）<br><br>合并之后可以用<code>$ git log --graph --pretty=oneline --abbrev-commit</code>查看历史分支<br><br>——————————————————————————————————————————————————————————————————————————————————————<br><br><font color="darkred">【Git】  打标签</font><br><img src="img/tag1.png" alt="tag1"><br><img src="img/tag2.png" alt="tag2"><br><img src="img/tag3.png" alt="tag3"><br><img src="img/tag4.png" alt="tag4"><br><img src="img/tag5.png" alt="tag5"><br><br>—<br><br><font color="darkred">【Git】  ssh密钥</font><br><img src="img/ssh.png" alt="ssh"><br><br><font color="red"><code>注意：</code>一个ssh密钥只能绑定一个github账号</font>
+
+<hr>
+<p><font color="darkred">【Hexo】  主题修改操作步骤</font><br><img src="img/change.png" alt="change"></p>
+<hr>
+<blockquote>
+<p>THE END<br>参考链接：<br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000" target="_blank" rel="noopener">远程仓库-廖雪峰的官方网站</a><br><a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">Hexo 博客搭建参考链接</a></p>
+</blockquote>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/10/18/Something-about-the-first-task/">
+    <time datetime="2018-10-18T14:08:24.000Z" class="entry-date">
+        2018-10-18
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/一些琐碎的知识/">一些琐碎的知识</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2018/10/17/my-first-blog/" rel="next">my-first-blog <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/18/Something-about-the-first-task/">Something about the first task</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/17/my-first-blog/">my-first-blog</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/17/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/一些琐碎的知识/">一些琐碎的知识</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/一些琐碎的知识/" style="font-size: 10px;">一些琐碎的知识</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2018 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
