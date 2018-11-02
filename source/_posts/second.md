@@ -22,7 +22,7 @@ IP地址：112.80.248.75
 
 ----
 
-![IP](img/IP.png)
+![IP](img/op.png)
 <br />
 其中200 OK 代表服务器请求成功
 GET 表示https请求方法

@@ -61,6 +61,81 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-jslearning" class="post-jslearning post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2018/11/02/jslearning/">jslearning</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/11/02/jslearning/" data-id="cjnzlivtn0000jstljmmwjryi" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h4 id="变量的声明"><a href="#变量的声明" class="headerlink" title="变量的声明"></a>变量的声明</h4><p>一条语句中声明的多个不可以赋同一个值:</p>
+<blockquote>
+<p>var x,y,z=1;<br>x , y 为 undefined（未给出使用值的变量）， <strong>z</strong>为 1</p>
+</blockquote>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var Name=new Array();</span><br><span class="line">Name[0]=&quot;lsc&quot;;</span><br><span class="line">Name[1]=&quot;qimei&quot;;</span><br><span class="line">Name[2]=&quot;jiangyue&quot;;</span><br><span class="line">document.write(&quot;Hello World&quot;+&quot;&lt;br&gt;&quot;);</span><br><span class="line">for(var j=0;j&lt;Name.length;j++)</span><br><span class="line">&#123;</span><br><span class="line">    document.write(Name[j]+&quot;&lt;br&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ps：其中<code>&quot;&lt;br&gt;&quot;</code>表示换行的意思！(一定要注意不要和css里的<code>&lt;br /&gt;</code>写混了)</p>
+<p>数组有四种方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&apos;a&apos;, &apos;b&apos;, &apos;c&apos;);    //这是一个预定义的数组，在创建时初始化</span><br><span class="line">var arr2 = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos; ];       //同样是在创建时初始化，但是这种创建更为简洁直观</span><br><span class="line">var arr3 = new Array( );   var arr4 = [ ];     //这两种是创建空的数组</span><br><span class="line">可以理解为new Array()=[]</span><br></pre></td></tr></table></figure></p>
+<p>ps：数据类型下面的笔记还没看（晚点记得看）;</p>
+<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><p>ps：对象的创建方式有两种<br>法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    name: &quot;lsc&quot;,</span><br><span class="line">    age: 20,</span><br><span class="line">    sex: &quot;女&quot;,</span><br><span class="line">    play: &quot;guitar&quot;,</span><br><span class="line">    play: function () &#123;</span><br><span class="line">        return &quot;like paly guitar&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var person =new Object();</span><br><span class="line">person.name=&quot;lsc&quot;;</span><br><span class="line">person.age=20;</span><br><span class="line">person.sex=&quot;女&quot;;</span><br><span class="line">person.play=&quot;guitar&quot;;</span><br><span class="line">person.play=function()&#123;</span><br><span class="line">    return &quot;like paly guitar&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;button onclick=&quot;getNameAndTel(&apos;lsc&apos;,&apos;110&apos;)&quot;&gt;点击一下！&lt;/button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function getNameAndTel(name,tel) &#123;</span><br><span class="line">	alert(&quot;name:&quot;+name+&quot;\n&quot;+&quot;tel：&quot;+tel);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>此时<code>\n</code>是起作用了的，但是如果换成<code>&quot;&lt;br&gt;&quot;</code>却不起作用？why？</p>
+<p>验证3+5的结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p id=&quot;demo&quot;&gt;验证3+5的结果&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	function compute(a,b)&#123;</span><br><span class="line">	return a+b;</span><br><span class="line">&#125;</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML=compute(3,5);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意：<br><code>document.getElementById(&quot;demo&quot;).innerHTML=compute(3,5);</code>千万不要写成这样   <code>innerHTML=&quot;computer(3,5)&quot;</code></p>
+</blockquote>
+<h4 id="向未声明的-JavaScript-变量分配值"><a href="#向未声明的-JavaScript-变量分配值" class="headerlink" title="向未声明的 JavaScript 变量分配值"></a>向未声明的 JavaScript 变量分配值</h4><p>如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。</p>
+<p>这条语句：</p>
+<blockquote>
+<p>carname=”Volvo”;</p>
+</blockquote>
+<p>将声明 window 的一个属性 carname。</p>
+<p>非严格模式下给未声明变量赋值创建的全局变量，是全局对象的可配置属性，可以删除。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var var1 = 1; // 不可配置全局属性</span><br><span class="line">var2 = 2; // 没有使用 var 声明，可配置全局属性</span><br><span class="line"></span><br><span class="line">console.log(this.var1); // 1</span><br><span class="line">console.log(window.var1); // 1</span><br><span class="line"></span><br><span class="line">delete var1; // false 无法删除</span><br><span class="line">console.log(var1); //1</span><br><span class="line"></span><br><span class="line">delete var2; </span><br><span class="line">console.log(delete var2); // true</span><br><span class="line">console.log(var2); // 已经删除 报错变量未定义</span><br></pre></td></tr></table></figure></p>
+<h4 id="JavaScript事件"><a href="#JavaScript事件" class="headerlink" title="JavaScript事件"></a>JavaScript事件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onclick=&quot;this.innerHTML=Date()&quot;&gt;现在的时间是？&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p>注意是this.innerHTML <strong>=</strong> Date()  <strong>是等号！</strong></p>
+<p>执行前：</p>
+<button onclick="this.innerHTML=Date()">现在的时间是？</button><br>执行后：<br><button>Thu Nov 01 2018 20:25:24 GMT+0800 (中国标准时间)</button>
+
+<hr>
+<h4 id="字符串可以是对象"><a href="#字符串可以是对象" class="headerlink" title="字符串可以是对象"></a>字符串可以是对象</h4><p>通常， JavaScript 字符串是原始值，可以使用字符创建：<code>var firstName = &quot;John&quot;</code></p>
+<p>但我们也可以使用 new 关键字将字符串定义为一个对象： <code>var firstName = new String(&quot;John&quot;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x = &quot;John&quot;;              // x是一个字符串</span><br><span class="line">var y = new String(&quot;John&quot;);  // y是一个对象</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML =typeof x + &quot; &quot; + typeof y;</span><br></pre></td></tr></table></figure></p>
+<p>ps：不要创建 String 对象。它会拖慢执行速度，并可能产生其他副作用：<br>“ “ 表示空格</p>
+<h4 id="两个等号与三个等号的区别"><a href="#两个等号与三个等号的区别" class="headerlink" title="两个等号与三个等号的区别"></a>两个等号与三个等号的区别</h4><p>===表示”绝对相等，即 <strong>数据类型</strong>与 <strong>值</strong>都必须相等”<br><code>实例：</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">var x = &quot;John&quot;;              // x 是字符串</span><br><span class="line">var y = new String(&quot;John&quot;);  // y 是一个对象</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML = x===y;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">// 结果为 false，因为 x 是字符串，y 是对象</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/11/02/jslearning/">
+    <time datetime="2018-11-02T05:45:14.000Z" class="entry-date">
+        2018-11-02
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-second" class="post-second post type-post status-publish format-standard hentry">
     <!---->
 
@@ -76,7 +151,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/10/24/second/" data-id="cjnvdhd5t0004dotltpcehkcd" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/10/24/second/" data-id="cjnzlivu30004jstliiwpcz6k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -89,7 +164,7 @@
 <p>URL:<a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a><br>域名：baidu.com<br>IP地址：112.80.248.75<br>服务器：www<br>网站名：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>协议：https<br>域名的解析是从右往左的，越往右域名级别越高</p>
 <p>利用F12开发者检查工具可以查看网页加载过程中需要加载的一些数据，以及其加载时间。<br><img src="img/baidu.png" alt="baidu"></p>
 <hr>
-<p><img src="img/IP.png" alt="IP"><br><br><br>其中200 OK 代表服务器请求成功<br>GET 表示https请求方法</p>
+<p><img src="img/op.png" alt="IP"><br><br><br>其中200 OK 代表服务器请求成功<br>GET 表示https请求方法</p>
 <p>URL：Uniform Resource Locator统一资源定位符</p>
 <p>CDN的全称是Content Delivery Network，即内容分发网络。<br>其目的是通过在现有的Internet中增加一层新的网络架构，<font color="red">将网站的内容发布到最接近用户的网络”边缘”，使用户可以就近取得所需的内容，解决Internet网络拥塞状况，提高用户访问网站的响应速度。</font>从技术上全面解决由于网络带宽小、用户访问量大、网点分布不均等原因，解决用户访问网站的响应速度慢的根本原因。</p>
 <p> <strong><em>网络服务器</em></strong> 是网络环境下为客户提供某种服务的专用计算机。</p>
@@ -169,7 +244,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/10/18/Something-about-the-first-task/" data-id="cjnvdhd5p0001dotl7xhvhl8o" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/10/18/Something-about-the-first-task/" data-id="cjnzlivu30003jstlzubw8okq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -267,7 +342,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/10/17/my-first-blog/" data-id="cjnvdhd5e0000dotl67f65jl7" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/10/17/my-first-blog/" data-id="cjnzlivu30002jstlmikqgh0n" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -328,7 +403,7 @@
 
 
   
-    <article id="post-hello-world" class="post-hello-world post type-post status-publish format-standard hentry">
+    <article id="post-learnJS" class="post-learnJS post type-post status-publish format-standard hentry">
     <!---->
 
       <header class="entry-header">
@@ -336,36 +411,60 @@
         
   
     <h1 class="entry-title">
-      <a class="article-title" href="/2018/10/17/hello-world/">Hello World</a>
+      <a class="article-title" href="/1970/01/01/learnJS/">learnJS</a>
     </h1>
   
 
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/10/17/hello-world/" data-id="cjnvdhd5q0002dotlindffbjo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/1970/01/01/learnJS/" data-id="cjnzlivu30001jstl1en9ilh1" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h4 id="变量的声明"><a href="#变量的声明" class="headerlink" title="变量的声明"></a>变量的声明</h4><p>一条语句中声明的多个不可以赋同一个值:</p>
+<blockquote>
+<p>var x,y,z=1;<br>x , y 为 undefined（未给出使用值的变量）， <strong>z</strong>为 1</p>
+</blockquote>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var Name=new Array();</span><br><span class="line">Name[0]=&quot;lsc&quot;;</span><br><span class="line">Name[1]=&quot;qimei&quot;;</span><br><span class="line">Name[2]=&quot;jiangyue&quot;;</span><br><span class="line">document.write(&quot;Hello World&quot;+&quot;&lt;br&gt;&quot;);</span><br><span class="line">for(var j=0;j&lt;Name.length;j++)</span><br><span class="line">&#123;</span><br><span class="line">    document.write(Name[j]+&quot;&lt;br&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ps：其中<code>&quot;&lt;br&gt;&quot;</code>表示换行的意思！(一定要注意不要和css里的<code>&lt;br /&gt;</code>写混了)</p>
+<p>数组有四种方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&apos;a&apos;, &apos;b&apos;, &apos;c&apos;);    //这是一个预定义的数组，在创建时初始化</span><br><span class="line">var arr2 = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos; ];       //同样是在创建时初始化，但是这种创建更为简洁直观</span><br><span class="line">var arr3 = new Array( );   var arr4 = [ ];     //这两种是创建空的数组</span><br><span class="line">可以理解为new Array()=[]</span><br></pre></td></tr></table></figure></p>
+<p>ps：数据类型下面的笔记还没看（晚点记得看）;</p>
+<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><p>ps：对象的创建方式有两种<br>法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    name: &quot;lsc&quot;,</span><br><span class="line">    age: 20,</span><br><span class="line">    sex: &quot;女&quot;,</span><br><span class="line">    play: &quot;guitar&quot;,</span><br><span class="line">    play: function () &#123;</span><br><span class="line">        return &quot;like paly guitar&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var person =new Object();</span><br><span class="line">person.name=&quot;lsc&quot;;</span><br><span class="line">person.age=20;</span><br><span class="line">person.sex=&quot;女&quot;;</span><br><span class="line">person.play=&quot;guitar&quot;;</span><br><span class="line">person.play=function()&#123;</span><br><span class="line">    return &quot;like paly guitar&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;button onclick=&quot;getNameAndTel(&apos;lsc&apos;,&apos;110&apos;)&quot;&gt;点击一下！&lt;/button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function getNameAndTel(name,tel) &#123;</span><br><span class="line">	alert(&quot;name:&quot;+name+&quot;\n&quot;+&quot;tel：&quot;+tel);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>此时<code>\n</code>是起作用了的，但是如果换成<code>&quot;&lt;br&gt;&quot;</code>却不起作用？why？</p>
+<p>验证3+5的结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p id=&quot;demo&quot;&gt;验证3+5的结果&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	function compute(a,b)&#123;</span><br><span class="line">	return a+b;</span><br><span class="line">&#125;</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML=compute(3,5);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意：<br><code>document.getElementById(&quot;demo&quot;).innerHTML=compute(3,5);</code>千万不要写成这样   <code>innerHTML=&quot;computer(3,5)&quot;</code></p>
+</blockquote>
+<h4 id="向未声明的-JavaScript-变量分配值"><a href="#向未声明的-JavaScript-变量分配值" class="headerlink" title="向未声明的 JavaScript 变量分配值"></a>向未声明的 JavaScript 变量分配值</h4><p>如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。</p>
+<p>这条语句：</p>
+<blockquote>
+<p>carname=”Volvo”;</p>
+</blockquote>
+<p>将声明 window 的一个属性 carname。</p>
+<p>非严格模式下给未声明变量赋值创建的全局变量，是全局对象的可配置属性，可以删除。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var var1 = 1; // 不可配置全局属性</span><br><span class="line">var2 = 2; // 没有使用 var 声明，可配置全局属性</span><br><span class="line"></span><br><span class="line">console.log(this.var1); // 1</span><br><span class="line">console.log(window.var1); // 1</span><br><span class="line"></span><br><span class="line">delete var1; // false 无法删除</span><br><span class="line">console.log(var1); //1</span><br><span class="line"></span><br><span class="line">delete var2; </span><br><span class="line">console.log(delete var2); // true</span><br><span class="line">console.log(var2); // 已经删除 报错变量未定义</span><br></pre></td></tr></table></figure></p>
+<h4 id="JavaScript事件"><a href="#JavaScript事件" class="headerlink" title="JavaScript事件"></a>JavaScript事件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onclick=&quot;this.innerHTML=Date()&quot;&gt;现在的时间是？&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p>注意是this.innerHTML <strong>=</strong> Date()  <strong>是等号！</strong></p>
+<p>执行前：</p>
+<button onclick="this.innerHTML=Date()">现在的时间是？</button><br>执行后：<br><button>Thu Nov 01 2018 20:25:24 GMT+0800 (中国标准时间)</button>
+
+<hr>
+<h4 id="字符串可以是对象"><a href="#字符串可以是对象" class="headerlink" title="字符串可以是对象"></a>字符串可以是对象</h4><p>通常， JavaScript 字符串是原始值，可以使用字符创建：<code>var firstName = &quot;John&quot;</code></p>
+<p>但我们也可以使用 new 关键字将字符串定义为一个对象： <code>var firstName = new String(&quot;John&quot;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x = &quot;John&quot;;              // x是一个字符串</span><br><span class="line">var y = new String(&quot;John&quot;);  // y是一个对象</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML =typeof x + &quot; &quot; + typeof y;</span><br></pre></td></tr></table></figure></p>
+<p>ps：不要创建 String 对象。它会拖慢执行速度，并可能产生其他副作用：<br>“ “ 表示空格</p>
+<h4 id="两个等号与三个等号的区别"><a href="#两个等号与三个等号的区别" class="headerlink" title="两个等号与三个等号的区别"></a>两个等号与三个等号的区别</h4><p>===表示”绝对相等，即 <strong>数据类型</strong>与 <strong>值</strong>都必须相等”<br><code>实例：</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">var x = &quot;John&quot;;              // x 是字符串</span><br><span class="line">var y = new String(&quot;John&quot;);  // y 是一个对象</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML = x===y;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">// 结果为 false，因为 x 是字符串，y 是对象</span><br></pre></td></tr></table></figure></p>
 
       
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
-    <a href="/2018/10/17/hello-world/">
-    <time datetime="2018-10-17T11:20:45.901Z" class="entry-date">
-        2018-10-17
+    <a href="/1970/01/01/learnJS/">
+    <time datetime="1970-01-01T00:00:00.010Z" class="entry-date">
+        1970-01-01
     </time>
 </a>
     
@@ -402,6 +501,10 @@
       <ul>
         
           <li>
+            <a href="/2018/11/02/jslearning/">jslearning</a>
+          </li>
+        
+          <li>
             <a href="/2018/10/24/second/">second</a>
           </li>
         
@@ -414,7 +517,7 @@
           </li>
         
           <li>
-            <a href="/2018/10/17/hello-world/">Hello World</a>
+            <a href="/1970/01/01/learnJS/">learnJS</a>
           </li>
         
       </ul>
