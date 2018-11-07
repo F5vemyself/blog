@@ -152,3 +152,151 @@ document.getElementById("demo").innerHTML = x===y;
 // 结果为 false，因为 x 是字符串，y 是对象
 ```
 
+#### 数据类型转换
+>手动转换
+
+* 数字转换为字符串
+toString(100+23);/String(100+23);
+
+* 日期转换为字符串
+String(new Date());
+
+* 字符串转换为number
+Number(222)  222
+Number("hello");  NaN
+
+* 布尔型转换为数字
+Number(false);
+
+---
+
+>自动类型转换
+
+* 自动转换为字符串
+当你尝试输出一个对象或一个变量时 JavaScript 会自动调用变量的 toString() 方法：
+
+```
+document.getElementById("demo").innerHTML = myVar;
+
+myVar = {name:"Fjohn"}  // toString 转换为 "[object Object]"
+myVar = [1,2,3,4]       // toString 转换为 "1,2,3,4"
+myVar = new Date()      // toString 转换为 "Fri Jul 18 2014 09:08:55 GMT+0200"
+```
+Infinity表示正无穷大
+
+---
+#### 几种简单的交互
+* confirm消息对话框
+* alert 弹出警告框
+* window.open打开窗口
+* window/自命名.close() 关闭窗口
+
+【confirm消息对话框】
+```
+function testConfirm()
+{
+    var tom=confirm("少年，你渴望力量吗？");
+    if(tom==true)
+    {
+        document.write("那你很棒棒哦！");
+    }    
+    else
+    document.write("那你好颓哦！");
+}
+```
+【window.open打开窗口】
+----------格式：window.open("url","打开方式","参数字符串")
+----------打开方式----------
+       _blank：在 **新窗口** 显示目标网页
+       _self：在 **当前窗口** 显示目标网页
+       _top：框架网页中在 **上部窗口** 中显示目标网页
+
+-----------参数表-----------
+参数      |值    |说明
+:-------:|:----:|:---:
+top      |Number|窗口顶部离开屏幕顶部的像素数
+left     |Number|窗口左端离开屏幕左端的像素数
+width    |Number|窗口的宽度
+height   |Number|窗口的高度
+menubar  |yes,no|窗口有没有菜单
+toolbar  |yes,no|窗口有没有工具条
+scollbars|yes,no|窗口有没有滚动条
+status   |yes,no|窗口有没有状态栏
+
+例如:打开http://www.imooc.com网站，大小为300px * 200px，无菜单，无工具栏，无状态栏，有滚动条窗口：
+```
+<script type="text/javascript"> 
+window.open('http://www.imooc.com','_blank','width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes')
+</script>
+```
+
+
+【拓展------编程练习】
+制作新按钮，“新窗口打开网站” ，点击打开新窗口。
+
+任务
+1、新窗口打开时弹出确认框，是否打开
+提示: 使用 if 判断确认框是否点击了确定，如点击弹出输入对话框，否则没有任何操作。
+2、通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/
+3、打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。
+
+```
+function ConfirmAndOpen()
+{   
+    var ifDo=confirm("请确认你是否要打开新窗口");
+    if(ifDo)
+    {
+        window.open("https://www.imooc.com/","_blank",
+        "width=400,heigth=500,menubar=no,toolbar=no,scollbars=no")
+    }
+    else
+    {
+        document.write("取消打开新窗口！");
+    }  
+}
+```
+
+---
+### DOM操作
+* 通过ID获取元素
+* 改变HTML的样式
+* 显示和隐藏效果
+* 控制类名
+#### 通过ID获取元素
+```
+<body>
+<p id="con">JavaScript</p>
+<script type="text/javascript">
+  var mychar=document.getElementById("con");
+  document.write("结果:"+mychar); //输出获取的P标签。 
+</script>
+</body>
+输出结果：[object HTMLParagraphElement]
+```
+
+>document.write("结果:"+mychar.innerHTML);//输出获取的P标签里的内容！
+
+#### 改变HTML的样式
+注意：script标签一定要在body里面，否则无效||并且p标签一定要在script标签的前面
+```
+<body>
+     <p id="demo">Hello world</p> 
+     <script >
+            var elementObj=document.getElementById("demo");
+            elementObj.style.color="red";
+            elementObj.style.backgroundColor="blue";
+            elementObj.style.fontSize="50px";
+        </script>
+</body>
+```
+
+#### 显示和隐藏效果
+1.隐藏：`mychar.style.display="none";`
+2.显示: `mychar.style.display="block";`
+
+#### 控制类名
+语法：`object.className = classname`
+1.添加"类名为one: `p1.className = "one";`
+2.修改为"类名为two: `p2.className = "two";`
+p1,p2表示对象
+border:1px solid #eee; //其中solid表示边界时实线

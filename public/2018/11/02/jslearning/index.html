@@ -26,7 +26,7 @@ var x,y,z=1;x , y 为 undefined（未给出使用值的变量）， z为 1
 <meta property="og:site_name" content="Revolver">
 <meta property="og:description" content="变量的声明一条语句中声明的多个不可以赋同一个值:  var x,y,z=1;x , y 为 undefined（未给出使用值的变量）， z为 1  数组123456789var Name=new Array();Name[0]=&amp;quot;lsc&amp;quot;;Name[1]=&amp;quot;qimei&amp;quot;;Name[2]=&amp;quot;jiangyue&amp;quot;;document.write(">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-02T05:48:08.019Z">
+<meta property="og:updated_time" content="2018-11-07T17:14:50.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jslearning">
 <meta name="twitter:description" content="变量的声明一条语句中声明的多个不可以赋同一个值:  var x,y,z=1;x , y 为 undefined（未给出使用值的变量）， z为 1  数组123456789var Name=new Array();Name[0]=&amp;quot;lsc&amp;quot;;Name[1]=&amp;quot;qimei&amp;quot;;Name[2]=&amp;quot;jiangyue&amp;quot;;document.write(">
@@ -84,7 +84,7 @@ var x,y,z=1;x , y 为 undefined（未给出使用值的变量）， z为 1
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/11/02/jslearning/" data-id="cjnzlivtn0000jstljmmwjryi" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/11/02/jslearning/" data-id="cjo7f6zb900009otl9vts1gnf" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -123,6 +123,56 @@ var x,y,z=1;x , y 为 undefined（未给出使用值的变量）， z为 1
 <p>但我们也可以使用 new 关键字将字符串定义为一个对象： <code>var firstName = new String(&quot;John&quot;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x = &quot;John&quot;;              // x是一个字符串</span><br><span class="line">var y = new String(&quot;John&quot;);  // y是一个对象</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML =typeof x + &quot; &quot; + typeof y;</span><br></pre></td></tr></table></figure></p>
 <p>ps：不要创建 String 对象。它会拖慢执行速度，并可能产生其他副作用：<br>“ “ 表示空格</p>
 <h4 id="两个等号与三个等号的区别"><a href="#两个等号与三个等号的区别" class="headerlink" title="两个等号与三个等号的区别"></a>两个等号与三个等号的区别</h4><p>===表示”绝对相等，即 <strong>数据类型</strong>与 <strong>值</strong>都必须相等”<br><code>实例：</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">var x = &quot;John&quot;;              // x 是字符串</span><br><span class="line">var y = new String(&quot;John&quot;);  // y 是一个对象</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML = x===y;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">// 结果为 false，因为 x 是字符串，y 是对象</span><br></pre></td></tr></table></figure></p>
+<h4 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h4><blockquote>
+<p>手动转换</p>
+</blockquote>
+<ul>
+<li><p>数字转换为字符串<br>toString(100+23);/String(100+23);</p>
+</li>
+<li><p>日期转换为字符串<br>String(new Date());</p>
+</li>
+<li><p>字符串转换为number<br>Number(222)  222<br>Number(“hello”);  NaN</p>
+</li>
+<li><p>布尔型转换为数字<br>Number(false);</p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>自动类型转换</p>
+</blockquote>
+<ul>
+<li>自动转换为字符串<br>当你尝试输出一个对象或一个变量时 JavaScript 会自动调用变量的 toString() 方法：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;demo&quot;).innerHTML = myVar;</span><br><span class="line"></span><br><span class="line">myVar = &#123;name:&quot;Fjohn&quot;&#125;  // toString 转换为 &quot;[object Object]&quot;</span><br><span class="line">myVar = [1,2,3,4]       // toString 转换为 &quot;1,2,3,4&quot;</span><br><span class="line">myVar = new Date()      // toString 转换为 &quot;Fri Jul 18 2014 09:08:55 GMT+0200&quot;</span><br></pre></td></tr></table></figure>
+<p>Infinity表示正无穷大</p>
+<hr>
+<h4 id="几种简单的交互"><a href="#几种简单的交互" class="headerlink" title="几种简单的交互"></a>几种简单的交互</h4><ul>
+<li>confirm消息对话框</li>
+<li>alert 弹出警告框</li>
+<li>window.open打开窗口</li>
+<li>window/自命名.close() 关闭窗口</li>
+</ul>
+<p>【confirm消息对话框】<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function testConfirm()</span><br><span class="line">&#123;</span><br><span class="line">    var tom=confirm(&quot;少年，你渴望力量吗？&quot;);</span><br><span class="line">    if(tom==true)</span><br><span class="line">    &#123;</span><br><span class="line">        document.write(&quot;那你很棒棒哦！&quot;);</span><br><span class="line">    &#125;    </span><br><span class="line">    else</span><br><span class="line">    document.write(&quot;那你好颓哦！&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>【window.open打开窗口】<br>———-格式：window.open(“url”,”打开方式”,”参数字符串”)<br>———-打开方式———-<br>       _blank：在 <strong>新窗口</strong> 显示目标网页<br>       _self：在 <strong>当前窗口</strong> 显示目标网页<br>       _top：框架网页中在 <strong>上部窗口</strong> 中显示目标网页</p>
+<p>———–参数表———–<br>参数      |值    |说明<br>:——-:|:—-:|:—:<br>top      |Number|窗口顶部离开屏幕顶部的像素数<br>left     |Number|窗口左端离开屏幕左端的像素数<br>width    |Number|窗口的宽度<br>height   |Number|窗口的高度<br>menubar  |yes,no|窗口有没有菜单<br>toolbar  |yes,no|窗口有没有工具条<br>scollbars|yes,no|窗口有没有滚动条<br>status   |yes,no|窗口有没有状态栏</p>
+<p>例如:打开<a href="http://www.imooc.com网站，大小为300px" target="_blank" rel="noopener">http://www.imooc.com网站，大小为300px</a> * 200px，无菜单，无工具栏，无状态栏，有滚动条窗口：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt; </span><br><span class="line">window.open(&apos;http://www.imooc.com&apos;,&apos;_blank&apos;,&apos;width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes&apos;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>【拓展——编程练习】<br>制作新按钮，“新窗口打开网站” ，点击打开新窗口。</p>
+<p>任务<br>1、新窗口打开时弹出确认框，是否打开<br>提示: 使用 if 判断确认框是否点击了确定，如点击弹出输入对话框，否则没有任何操作。<br>2、通过输入对话框，确定打开的网址，默认为 http：//<a href="http://www.imooc.com/" target="_blank" rel="noopener">www.imooc.com/</a><br>3、打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function ConfirmAndOpen()</span><br><span class="line">&#123;   </span><br><span class="line">    var ifDo=confirm(&quot;请确认你是否要打开新窗口&quot;);</span><br><span class="line">    if(ifDo)</span><br><span class="line">    &#123;</span><br><span class="line">        window.open(&quot;https://www.imooc.com/&quot;,&quot;_blank&quot;,</span><br><span class="line">        &quot;width=400,heigth=500,menubar=no,toolbar=no,scollbars=no&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        document.write(&quot;取消打开新窗口！&quot;);</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h3><ul>
+<li>通过ID获取元素</li>
+<li>改变HTML的样式</li>
+<li>显示和隐藏效果</li>
+<li>控制类名<h4 id="通过ID获取元素"><a href="#通过ID获取元素" class="headerlink" title="通过ID获取元素"></a>通过ID获取元素</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p id=&quot;con&quot;&gt;JavaScript&lt;/p&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  var mychar=document.getElementById(&quot;con&quot;);</span><br><span class="line">  document.write(&quot;结果:&quot;+mychar); //输出获取的P标签。 </span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">输出结果：[object HTMLParagraphElement]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>document.write(“结果:”+mychar.innerHTML);//输出获取的P标签里的内容！</p>
+</blockquote>
+<h4 id="改变HTML的样式"><a href="#改变HTML的样式" class="headerlink" title="改变HTML的样式"></a>改变HTML的样式</h4><p>注意：script标签一定要在body里面，否则无效||并且p标签一定要在script标签的前面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">     &lt;p id=&quot;demo&quot;&gt;Hello world&lt;/p&gt; </span><br><span class="line">     &lt;script &gt;</span><br><span class="line">            var elementObj=document.getElementById(&quot;demo&quot;);</span><br><span class="line">            elementObj.style.color=&quot;red&quot;;</span><br><span class="line">            elementObj.style.backgroundColor=&quot;blue&quot;;</span><br><span class="line">            elementObj.style.fontSize=&quot;50px&quot;;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="显示和隐藏效果"><a href="#显示和隐藏效果" class="headerlink" title="显示和隐藏效果"></a>显示和隐藏效果</h4><p>1.隐藏：<code>mychar.style.display=&quot;none&quot;;</code><br>2.显示: <code>mychar.style.display=&quot;block&quot;;</code></p>
+<h4 id="控制类名"><a href="#控制类名" class="headerlink" title="控制类名"></a>控制类名</h4><p>语法：<code>object.className = classname</code><br>1.添加”类名为one: <code>p1.className = &quot;one&quot;;</code><br>2.修改为”类名为two: <code>p2.className = &quot;two&quot;;</code><br>p1,p2表示对象<br>border:1px solid #eee; //其中solid表示边界时实线</p>
 
       
     </div><!-- .entry-content -->
@@ -188,10 +238,6 @@ var x,y,z=1;x , y 为 undefined（未给出使用值的变量）， z为 1
         
           <li>
             <a href="/2018/10/17/my-first-blog/">my-first-blog</a>
-          </li>
-        
-          <li>
-            <a href="/1970/01/01/learnJS/">learnJS</a>
           </li>
         
       </ul>
