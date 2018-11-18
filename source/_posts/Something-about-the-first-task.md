@@ -104,9 +104,9 @@ $ git commit -m "remove readme.txt"
 如何删除已建立的联系呢?
 1.使用`$ git remote `命令查看是否建立联系， 如果已经建立了联系，会出现`origin`
 2.使用`$ git remote -v `查看和谁建立了联系
-![remote-v](img/remote-v.png)
+![remote-v](/img/remote-v.png)
 3.如果已经建立联系了
-![remote-rm](img/remote-rm.png) 此时利用此命令取消联系
+![remote-rm](/img/remote-rm.png) 此时利用此命令取消联系
 
 ---
 <font color="darkred">【Git】  分支合并与修改</font>
@@ -121,23 +121,23 @@ $ git commit -m "remove readme.txt"
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <font color="darkred">【Git】  打标签</font>
-![tag1](img/tag1.png)
-![tag2](img/tag2.png)
-![tag3](img/tag3.png)
-![tag4](img/tag4.png)
-![tag5](img/tag5.png)
+![tag1](/img/tag1.png)
+![tag2](/img/tag2.png)
+![tag3](/img/tag3.png)
+![tag4](/img/tag4.png)
+![tag5](/img/tag5.png)
 
 ---
 
 <font color="darkred">【Git】  ssh密钥</font>
-![ssh](img/ssh.png)
+![ssh](/img/ssh.png)
 
 <font color="red">```注意：```一个ssh密钥只能绑定一个github账号</font>
 
 ---
 
 <font color="darkred">【Hexo】  主题修改操作步骤</font>
-![change](img/change.png)
+![change](/img/change.png)
 
 
 ---

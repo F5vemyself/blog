@@ -20,23 +20,23 @@ tags:
 
 1. 版本库的创建
 
-![cd](img/cd.png)
+![cd](/img/cd.png)
 `$ cd d:computer`  将当前路径转到你认为合适的位置
 
 ---
-![mkdir](img/mkr.png)
+![mkdir](/img/mkr.png)
 `$ mkdir gitblog` &emsp; 创建一个名为gitblog的文件
 
 ---
-![cd2](img/cd2.png)
+![cd2](/img/cd2.png)
 `$ cd gitblog`&emsp; 将当前路径转到刚刚创建的gitblog
 
 ---
-![init](img/init.png)
+![init](/img/init.png)
 `$ git init`&emsp;  将gitblog文件放在git下管理
 
 ---
-![pwd](img/pwd.png)
+![pwd](/img/pwd.png)
 `$ pwd` &emsp;  查看gitblog所在目录
 
 [使用md文档编写，通过hexo搭建的博客在github的存储地址](https://github.com/F5vemyself/F5vemyself.github.io)

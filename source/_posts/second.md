@@ -18,11 +18,11 @@ IP地址：112.80.248.75
 域名的解析是从右往左的，越往右域名级别越高
 
 利用F12开发者检查工具可以查看网页加载过程中需要加载的一些数据，以及其加载时间。
-![baidu](img/baidu.png)
+![baidu](/img/baidu.png)
 
 ----
 
-![IP](img/op.png)
+![IP](/img/op.png)
 <br />
 其中200 OK 代表服务器请求成功
 GET 表示https请求方法
@@ -55,8 +55,8 @@ Cookie就是服务器暂存放在你计算机上的一笔资料，好让服务�
 终端：终端（Terminal）也称终端设备，是计算机网络中处于网络最外围的设备，主要用于用户信息的输入以及处理结果的输出等。如PC端.
 
 <font color="darkred">【查看cookie文件】</font>
-![cookie](img/cookie.png)
-![cookies](img/cookies.png)
+![cookie](/img/cookie.png)
+![cookies](/img/cookies.png)
 
 【两种存储方式】
 LocalStorage:对象负责存储没有到期的数据。当Web页面或浏览器关闭时，仍会保持数据的存储
@@ -65,8 +65,8 @@ SessionStorage：对象负责存储一个会话的数据。如果用户关闭了
 
 【HTTP协议】
 HTTP协议在网络上传输的图解
-![HTTP](img/HTTP.jpg)
-![HTTP](img/HTTP2.jpg)
+![HTTP](/img/HTTP.jpg)
+![HTTP](/img/HTTP2.jpg)
 ---------ps：需要了解Iconfont的用法（后续）----------
 
 异步加载：加载数据时仍然执行其他程序
