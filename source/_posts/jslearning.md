@@ -1,7 +1,7 @@
 ---
 title: jslearning
-date: 2018-11-02 13:45:14
-tags:
+date: 
+tags: js学习入门篇
 ---
 #### 变量的声明
 一条语句中声明的多个不可以赋同一个值:
@@ -150,6 +150,12 @@ var y = new String("John");  // y 是一个对象
 document.getElementById("demo").innerHTML = x===y;
 </script>
 // 结果为 false，因为 x 是字符串，y 是对象
+```
+```
+var a=5;     
+var b='5';
+alert(a==b);  结果为true   原因：==隐式转换(我们并没有告诉计算机要转换)，先转换类型，再比较
+alert(a===b); 结果为false  原因：不转换类型，直接比较
 ```
 
 #### 数据类型转换
@@ -300,3 +306,107 @@ function ConfirmAndOpen()
 2.修改为"类名为two: `p2.className = "two";`
 p1,p2表示对象
 border:1px solid #eee; //其中solid表示边界时实线
+
+#### 综合应用
+
+>编程挑战
+小伙伴们，请编写"改变颜色"、"改变宽高"、"隐藏内容"、"显示内容"、"取消设置"的函数，点击相应按钮执行相应操作，点击"取消设置"按钮后，提示是否取消设置，如是执行操作，否则不做操作。
+
+【任务】
+```
+一、定义"改变颜色"的函数
+提示:
+obj.style.color
+obj.style.backgroundColor
+```
+```
+二、定义"改变宽高"的函数
+提示:
+obj.style.width
+obj.style.height 
+```
+```
+三、定义"隐藏内容"的函数
+提示:
+obj.style.display="none";
+```
+```
+四、定义"显示内容"的函数
+提示:
+obj.style.display="block";
+```
+```
+五、定义"取消设置"的函数
+提示: 
+使用confirm()确定框，来确认是否取消设置。
+如是将以上所有的设置恢复原始值,否则不做操作。
+var mychoose=confirm("");
+txt.removeAttribute("style");
+```
+```
+六、当点击相应按钮，执行相应操作，为按钮添加相应事件
+```
+【代码】
+```
+<style>
+            #txt {
+                background-color:beige;
+                height: 200px;
+                width: 600px;
+                border: #333 solid 1px;
+                padding:5px;  /*让文字不紧贴着边框 */
+            }
+            p{
+                line-height:18px;
+                text-indent:2em;   /*首行缩进*/
+            }
+        </style>
+    </head>
+
+    <body>  
+            <h2 id="con">JavaScript课程</H2>
+            <div id="txt"> 
+                
+                <h5>JavaScript为网页添加动态效果并实现与用户交互的功能。</h5>
+                <p>1. JavaScript入门篇，让不懂JS的你，快速了解JS。</p>
+                <p>2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。</p>
+                <p>3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。</p>
+            </div>
+            <form action="">
+                <button type="button" onclick="changeColor()">改变颜色</button>
+                <button type="button" onclick="widthAndHeight()">改变宽高</button>
+                <button type="button" onclick="displayNone()">隐藏内容</button>
+                <button type="button" onclick="displayBlock()">显示内容</button>
+                <button type="button" onclick="cancelConfirm()">取消设置</button>
+            </form>
+        <script >
+            var txt=document.getElementById("txt");
+            function changeColor()
+            {
+                txt.style.backgroundColor="rgb(31, 173, 192)";
+            }
+            function widthAndHeight()
+            {
+                txt.style.width="500px";
+                txt.style.height="190px";
+            }
+            function displayNone()
+            {
+                txt.style.display="none";
+            }
+            function displayBlock()
+            {
+                txt.style.display="block";
+            } 
+            function  cancelConfirm()
+            {
+                var mychoose=confirm("请确认是否取消设置？");
+                if(mychoose==true)
+                {
+                    txt.removeAttribute("style");
+                }
+            }
+        </script>
+    </body>
+</html>
+```
