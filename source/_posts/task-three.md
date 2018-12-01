@@ -197,3 +197,8 @@ gulp.task('imagemin', function() {
   },
 ```
 2.在项目根目录下输出`npm run minifycss`命令
+
+参考链接：
+* [npm 与 package.json 快速入门教程 - 张拭心的博客 shixinzhang - CSDN博客](https://blog.csdn.net/u011240877/article/details/76582670#packagejson-的内容)
+* [一点 | gulp详细入门教程](http://www.ydcss.com/archives/18)
+* [npm模块管理器 -- JavaScript 标准参考教程（alpha）](http://javascript.ruanyifeng.com/nodejs/npm.html#toc6)
