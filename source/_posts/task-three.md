@@ -29,6 +29,9 @@ tags: learn package.json/gulp/editorconfig
 * 2.3.4、使用npm更新插件：`npm update <name> [-g] [--save-dev]`
 * 2.3.5、当前目录已安装插件：`npm list`
 
+2.4、npm的更新
+`npm install npm@latest -g`
+其中 install 不用介绍了，就是安装，后面的 npm@latest 就是 \<packageName\>@\<version\> 的格式，我们在下载其他模块时也是这个格式。-g 代表全局安装。
 #### 3、npm的镜像使用
 npm太慢， 淘宝npm镜像使用方法
 `淘宝 npm 地址： http://npm.taobao.org/`
@@ -54,8 +57,80 @@ npm太慢， 淘宝npm镜像使用方法
 先进入对应的根目录
 `npm install gulp --save-dev `
 
-####5、新建package.json文件
+#### 5、新建package.json文件
+
 若已经有则不用新建了，只需要完善配置
+package.json 文件至少要有两部分内容：
+
+
+1.“name” 
+* 全部小写，没有空格，可以使用下划线或者横线
+
+2.“version” 
+* x.x.x 的格式
+* 符合“语义化版本规则”
+
+
+
+比如：
+```{
+  "name": "shixinzhang-demo-package",
+  "version": "1.0.0"
+}
+```
+
+其他内容:
+* description：描述信息，有助于搜索
+* main: 入口文件，一般都是 index.js
+* scripts：支持的脚本，默认是一个空的 test
+
+    * scripts: 声明一系列npm脚本指令
+    prepublish: 在包发布之前运行，也会在npm install安装到本地时运行
+    publish,postpublish: 包被发布之后运行
+    preinstall: 包被安装前运行
+    install,postinstall: 包被安装后运行
+    preuninstall,uninstall: 包被卸载前运行
+    postuninstall: 包被卸载后运行
+    preversion: bump包版本前运行
+    postversion: bump包版本后运行
+    pretest,test,posttest: 通过npm test命令运行
+    prestop,stop,poststop: 通过npm stop命令运行
+    prestart,start,poststart: 通过npm start命令运行
+    prerestart,restart,postrestart: 通过npm restart运行
+
+* keywords：关键字，有助于在人们使用 npm search 搜索时发现你的项目
+* author：作者信息
+* license：默认是 MIT
+* bugs：当前项目的一些错误信息，如果有的话
+
+**npm** 还可以直接运行 `package.json` 中 `scripts` 指定的脚本：
+```
+{
+  "name": "demo",
+  "scripts": {
+    "lint": "jshint **.js",
+    "test": "mocha test/"
+  }
+}
+```
+**npm run 是 npm run-script 的缩写。**
+
+命令行输入` npm run lint` 或者` npm run-script lint` 就会执行 `jshint **.js `。
+
+
+>`npm run `会创建一个Shell，执行指定的命令，并临时将node_modules/.bin加入PATH 变量，这意味着本地模块可以直接运行。
+
+
+`package.json `中的 `scripts` 执行的脚本是本地项目内 `node_modules` -> `.bin `内的脚本。
+```
+    "scripts": {
+        "build": "weex-builder src dist",
+        "build_plugin": "webpack --config ./tools/webpack.config.plugin.js --color",
+        "dev": "weex-builder src dist -w",
+        "serve": "serve -p 8080"
+    }
+```
+
 
 #### 6、本地安装gulp插件
 后续的配置文件里只要写了的都得安装
