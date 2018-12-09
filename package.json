@@ -9,8 +9,9 @@
     "imagemin": "gulp imagemin",
     "htmlmin": "gulp htmlmin",
     "minifycss": "gulp minifycss",
-    "uglify": "gulp uglify"
-  },
+    "uglify": "gulp uglify",
+    "all": "gulp"
+    },
   "dependencies": {
     "hexo": "^3.2.0",
     "hexo-deployer-git": "^0.3.1",

@@ -14,8 +14,18 @@ gulp.task('minifycss', function() {
 
 //压缩html文件
 gulp.task('htmlmin', function() {
+    var options = {
+        removeComments: true,//清除HTML注释
+        collapseWhitespace: true,//压缩HTML
+        collapseBooleanAttributes: true,//省略布尔属性的值 <input checked="true"/> ==> <input />
+        removeEmptyAttributes: true,//删除所有空格作属性值 <input id="" /> ==> <input />
+        removeScriptTypeAttributes: true,//删除<script>的type="text/javascript"
+        removeStyleLinkTypeAttributes: true,//删除<style>和<link>的type="text/css"
+        minifyJS: true,//压缩页面JS
+        minifyCSS: true//压缩页面CSS
+    };
     return gulp.src('./public/**/*.html')    //压缩的文件
-        .pipe(htmlmin())                     //执行压缩
+        .pipe(htmlmin(options))              //执行压缩
         .pipe(gulp.dest('./public'));        //输出文件夹
 });
 
@@ -37,4 +47,5 @@ gulp.task('imagemin', function() {
         }))                   
         .pipe(gulp.dest('./public'));                   //输出文件夹
 });
-
+gulp.task('default',['htmlmin','minifycss','uglify','imagemin'],function(){
+});
